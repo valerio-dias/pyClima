@@ -1,32 +1,18 @@
-import requests
-import json
 from tkinter import *
-from turtle import Turtle, Screen
 
-t = Turtle()
-t.hideturtle()
-screen = Screen()
+window = Tk()
+window['bg'] = '#FCA311'
+window.geometry('200x100')
+window.resizable(0, 0)
+window.frames = None
+window.title('pyClima')
+window.wm_iconbitmap('images/weather.ico')
 
-def tela(r, g, b, mensagem):
-    screen.setup(width=400, height=300)
-    screen.bgcolor(#FCA311)
-    screen.title('pyClima')
-    screen.tracer(0)
-    t.clear()
-    t.goto(0, 250)
-    t.color('white')
-    t.clear()
-    t.write('pyClima', align='center', font=('Comic Sans MS', 30, 'normal'))
-    t.goto(0, -250)
-    t.color('white')
-    t.write(mensagem, align='center', font=('Comic Sans MS', 15, 'normal'))
+label = Label(window, text='40º', bg='#FCA311', font= 'impact 50 bold').place(x=90, y=5)
+label = Label(window, text='nublado', bg='#FCA311', font= 'impact 10 bold').place(x=10, y=40)
 
 
 
 
 
-
-
-
-
-screen.exitonclick()
+window.mainloop()
